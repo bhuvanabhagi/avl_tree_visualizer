@@ -1,0 +1,67 @@
+:root {
+  --bg: #f4f6fa;
+  --text: #222;
+  --canvas: #ffffff;
+  --node: #4CAF50;
+  --node-text: #fff;
+  --line: #555;
+  --btn: #4CAF50;
+  --btn-text: #fff;
+}
+
+body.dark {
+  --bg: #1e1e2f;
+  --text: #f5f5f5;
+  --canvas: #2c2c3c;
+  --node: #ff9800;
+  --node-text: #000;
+  --line: #ddd;
+  --btn: #ff9800;
+  --btn-text: #000;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+canvas {
+  background: var(--canvas);
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: var(--btn);
+  color: var(--btn-text);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+input {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}

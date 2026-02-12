@@ -1,0 +1,74 @@
+AVL TREE – THEORY NOTES
+
+1. Time Complexity of Major Operations in a Binary Search Tree (BST)
+
+Search:
+Best Case: O(1) – when the element is at the root.
+Average Case: O(log n) – when the tree is approximately balanced.
+Worst Case: O(n) – when the tree becomes skewed (like a linked list).
+
+Insertion:
+Best Case: O(1).
+Average Case: O(log n).
+Worst Case: O(n) due to skewed structure.
+
+Deletion:
+Best Case: O(1).
+Average Case: O(log n).
+Worst Case: O(n).
+
+2. Need for Balanced Binary Search Trees
+
+In an unbalanced BST, operations may degrade to linear time.
+Balanced BSTs ensure the height remains logarithmic.
+This guarantees efficient searching, insertion, and deletion.
+Balanced trees are essential for performance-critical applications.
+
+3. How AVL Tree Detects Imbalance
+
+Each node stores its height.
+Balance Factor (BF) is calculated as:
+BF = height(left subtree) – height(right subtree)
+
+If BF is:
+-1, 0, or +1 → Balanced
++2 or -2 → Unbalanced
+
+4. AVL Tree Imbalance Cases and Fixes
+
+LL Case:
+Occurs when insertion happens in left subtree of left child.
+Fix: Single Right Rotation.
+
+RR Case:
+Occurs when insertion happens in right subtree of right child.
+Fix: Single Left Rotation.
+
+LR Case:
+Occurs when insertion happens in right subtree of left child.
+Fix: Left rotation on left child, then right rotation.
+
+RL Case:
+Occurs when insertion happens in left subtree of right child.
+Fix: Right rotation on right child, then left rotation.
+
+5. Comparison of AVL Tree and Red-Black Tree
+
+AVL Tree:
+- Strictly balanced
+- Faster search
+- More rotations
+- Slower insertion and deletion
+
+Red-Black Tree:
+- Loosely balanced
+- Slightly slower search
+- Fewer rotations
+- Faster insertion and deletion
+
+6. Why Java Uses Red-Black Trees in TreeMap
+
+Java TreeMap performs frequent insertions and deletions.
+AVL Trees require more rotations to maintain strict balance.
+Red-Black Trees require fewer rotations, improving overall performance.
+Hence, Java uses Red-Black Trees for efficiency.
