@@ -1,4 +1,4 @@
-AVL TREE – THEORY NOTES
+AVL TREE – NOTES
 
 1. Time Complexity of Major Operations in a Binary Search Tree (BST)
 
